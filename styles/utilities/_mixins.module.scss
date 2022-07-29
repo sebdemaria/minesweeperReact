@@ -1,0 +1,7 @@
+@mixin defaultContainerStyle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 2rem;
+}

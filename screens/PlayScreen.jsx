@@ -1,7 +1,7 @@
-import Home from "@components/Home";
+import Play from "@components/Play";
 
 const HomeScreen = () => {
-    return <Home />;
+    return <Play />;
 };
 
 export default HomeScreen;

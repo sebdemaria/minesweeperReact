@@ -9,6 +9,6 @@
             "@public/*": ["./public/*"]
         }
     },
-    "include": ["./**/*.js"],
+    "include": ["./**/*.js", "components/Home/index.jsx"],
     "exclude": ["node_modules", "**/node_modules", "dist"]
 }
