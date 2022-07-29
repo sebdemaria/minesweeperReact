@@ -1,8 +1,24 @@
-const PlayDumb = ({ playersName }) => {
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Table from "../Table/Table";
+
+const PlayDumb = ({ playersName, boardX, boardY }) => {
+    const router = useRouter();
+
     return !playersName ? (
-        <h1>Bienvenido, vamos a jugar!</h1>
+        <>
+            <h1>Vuelva al inicio e ingrese su nombre para comenzar a jugar</h1>
+            <Link href={"/"}>
+                <a>
+                    <button className="btn btn-primary">Home</button>
+                </a>
+            </Link>
+        </>
     ) : (
-        <h1>Hola {playersName}, vamos a jugar!</h1>
+        <section>
+            <h1 className="h-50">Hola {playersName}, vamos a jugar!</h1>
+            <Table boardX={boardX} boardY={boardY}/>
+        </section>
     );
 };
 

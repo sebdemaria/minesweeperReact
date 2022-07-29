@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import PlayDumb from "./PlayDumb";
 
-const index = () => {
+const index = ({ boardX, boardY }) => {
     const [, getItem] = useLocaleStorage();
 
     const [playersName, setPlayersName] = useState("");
@@ -12,7 +12,9 @@ const index = () => {
         setPlayersName(getItem("playerName"));
     }, []);
 
-    return <PlayDumb playersName={playersName} />;
+    return (
+        <PlayDumb playersName={playersName} boardX={boardX} boardY={boardY} />
+    );
 };
 
 export default index;
