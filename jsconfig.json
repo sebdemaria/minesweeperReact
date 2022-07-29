@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@hooks/*": ["./hooks/*"],
+            "@screens/*": ["./screens/*"],
+            "@components/*": ["./components/*"],
+            "@styles/*": ["./styles/*"],
+            "@public/*": ["./public/*"]
+        }
+    },
+    "include": ["./**/*.js"],
+    "exclude": ["node_modules", "**/node_modules", "dist"]
+}
