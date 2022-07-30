@@ -1,0 +1,28 @@
+@import '../utilities/indexUtils.module';
+
+.boardDiv {
+
+    display: flex;
+    justify-content: center;
+
+    .tr {
+        display: flex;
+
+        .mine {
+            @include borderBlack;
+            height: 3em;
+            margin: 0;
+            padding: 0.5em;
+            width: 3em;
+
+            &:hover {
+                background-color: $lightGray;
+                transition: 0.1s ease-in-out;
+            }
+        }
+
+        .mineHitted{
+            @include mineHitted;
+        }
+    }
+}

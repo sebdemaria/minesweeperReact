@@ -1,7 +1,7 @@
-import styles from "@styles/Home.module.scss";
+import styles from "@styles/screenStyles/Home.module.scss";
 import Head from "next/head";
 
-import HomeScreen from "@screens/HomeScreen";
+import { Home as HomeScreen } from "@screens/Home";
 
 export default function Home() {
     return (

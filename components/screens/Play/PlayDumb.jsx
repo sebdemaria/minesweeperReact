@@ -1,9 +1,12 @@
+import { Counter } from "@components/Counter";
+import { Table } from "@components/Table/Table";
+import { useBoard } from "@hooks/useBoard";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import Table from "../Table/Table";
 
-const PlayDumb = ({ playersName, boardX, boardY }) => {
-    const router = useRouter();
+export const PlayDumb = ({ playersName, cols, rows }) => {
+    const [createBoard] = useBoard();
+
+    const board = createBoard(cols, rows);
 
     return !playersName ? (
         <>
@@ -17,9 +20,9 @@ const PlayDumb = ({ playersName, boardX, boardY }) => {
     ) : (
         <section>
             <h1 className="h-50">Hola {playersName}, vamos a jugar!</h1>
-            <Table boardX={boardX} boardY={boardY}/>
+            <Table board={board} />
+
+            {/* <Counter state={state} /> */}
         </section>
     );
 };
-
-export default PlayDumb;

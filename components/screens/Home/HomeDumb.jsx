@@ -1,4 +1,5 @@
-import styles from "@styles/Home.module.scss";
+import { Button } from "@components/UI/Button";
+import styles from "@styles/screenStyles/Home.module.scss";
 
 const HomeDumb = ({ handleSubmit, handleInputChange }) => {
     return (
@@ -15,9 +16,9 @@ const HomeDumb = ({ handleSubmit, handleInputChange }) => {
                 />
             </div>
 
-            <button type="submit" className="btn btn-primary mt-3">
+            <Button type="submit" moreClass="btn btn-primary mt-3">
                 Comenzar!
-            </button>
+            </Button>
         </form>
     );
 };

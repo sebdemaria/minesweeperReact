@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import HomeDumb from "./HomeDumb";
 
-const Home = () => {
+export const Home = () => {
     const router = useRouter();
 
     const [setItem, , removeItem] = useLocaleStorage();
@@ -26,7 +26,7 @@ const Home = () => {
         return () => {
             setItem("playerName", playersName);
         };
-    }, [playersName]);
+    }, [playersName, removeItem, setItem]);
 
     return (
         <HomeDumb
@@ -35,5 +35,3 @@ const Home = () => {
         />
     );
 };
-
-export default Home;
