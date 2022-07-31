@@ -1,30 +1,28 @@
 @import "../utilities/indexUtils.module";
 
 .cell:hover {
-    background-color: $lightGray;
-    cursor: pointer;
-    transition: 0.1s ease-in-out;
+    @include hoverBehaviour;
 }
 
 .boardDiv {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: $fiveEm;
     width: 100%;
 
     .tbody {
-        border-radius: 10px;
+        border-radius: $px10;
 
         .tr {
             display: flex;
 
             .mine {
                 @include borderBlack;
-                border-radius: 10px;
-                height: 3em;
+                border-radius: $px10;
+                height: $threeEm;
                 margin: 0.1em;
                 padding: 0.5em;
-                width: 3em;
+                width: $threeEm;
             }
 
             .mineHitted {

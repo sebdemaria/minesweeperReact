@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+
 export const useLocaleStorage = () => {
     const setItem = (key, value, parse = true) => {
         if (!parse) {
@@ -7,9 +9,9 @@ export const useLocaleStorage = () => {
         }
     };
 
-    const getItem = (key) => {
+    const getItem = useCallback((key) => {
         return localStorage.getItem(key);
-    };
+    }, []);
 
     const removeItem = (key) => {
         return localStorage.removeItem(String(key));

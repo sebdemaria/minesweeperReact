@@ -6,7 +6,20 @@
     flex-wrap: wrap;
     justify-content: center;
     min-height: 100vh;
-    padding: 0 2rem;
+    padding: 3em 0;
+}
+
+@mixin hoverBehaviour {
+    background-color: $lightGray;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+@mixin centerAlignAndWrap {
+    align-items: $center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $center;
 }
 
 @mixin borderBlack {
