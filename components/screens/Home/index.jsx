@@ -26,7 +26,7 @@ export const Home = () => {
         return () => {
             setItem("playerName", playersName);
 
-            if (scores.length > 0) {
+            if (scores !== null && scores.length > 0) {
                 return;
             } else {
                 setItem("scores", JSON.stringify([]), false);
