@@ -8,7 +8,6 @@ const Scoreboard = () => {
     const [, getItem] = useLocaleStorage();
 
     const scores = JSON.parse(getItem("scores"));
-    console.log(scores);
 
     return (
         <table className="table">
