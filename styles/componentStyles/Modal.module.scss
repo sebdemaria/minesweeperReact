@@ -1,0 +1,16 @@
+@import "../utilities/indexUtils.module";
+
+.modal {
+    align-items: center;
+    background-color: white;
+    border: 1px solid $lightGray;
+    border-radius: 12px;
+    box-shadow: inset 0px 0px 5px 0.5px $lightGray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5em;
+    position: absolute;
+    width: 50%;
+    z-index: 1000;
+}

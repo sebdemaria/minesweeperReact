@@ -1,0 +1,26 @@
+@import "./variables.module";
+
+@mixin defaultContainerStyle {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 2rem;
+}
+
+@mixin borderBlack {
+    border: 1px solid $black;
+}
+
+@mixin mineHitted {
+    border: 1px solid $error-red;
+    box-shadow: inset 0px 0px 5px 0.5px $error-red;
+    color: #ff8989;
+}
+
+@mixin cellClicked {
+    border: 1px solid $clicked;
+    box-shadow: inset 0px 0px 5px 0.5px $clicked;
+    color: $clicked;
+}

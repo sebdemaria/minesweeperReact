@@ -1,0 +1,43 @@
+@import "../utilities/indexUtils.module";
+
+.cell:hover {
+    background-color: $lightGray;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.boardDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+    width: 100%;
+
+    .tbody {
+        border-radius: 10px;
+
+        .tr {
+            display: flex;
+
+            .mine {
+                @include borderBlack;
+                border-radius: 10px;
+                height: 3em;
+                margin: 0.1em;
+                padding: 0.5em;
+                width: 3em;
+            }
+
+            .mineHitted {
+                @include mineHitted;
+            }
+
+            .cellClicked {
+                @include cellClicked;
+            }
+
+            .cellEmpty {
+                background-color: $lightGray;
+            }
+        }
+    }
+}

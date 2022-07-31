@@ -3,12 +3,14 @@
         "baseUrl": ".",
         "paths": {
             "@hooks/*": ["./hooks/*"],
-            "@screens/*": ["./screens/*"],
+            "@screens/*": ["components/screens/*"],
             "@components/*": ["./components/*"],
             "@styles/*": ["./styles/*"],
-            "@public/*": ["./public/*"]
+            "@public/*": ["./public/*"],
+            "@context/*": ["./context/*"],
+            "@store/*": ["./store/*"]
         }
     },
-    "include": ["./**/*.js"],
+    "include": ["./**/*.js", "components/screens/Home/index.jsx"],
     "exclude": ["node_modules", "**/node_modules", "dist"]
 }

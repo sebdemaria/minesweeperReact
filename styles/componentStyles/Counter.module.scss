@@ -1,0 +1,11 @@
+@import "../utilities/indexUtils.module";
+
+.counter {
+    border: 1px solid $black;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 1em;
+    padding: 0.5em;
+    width: 30%;
+}
