@@ -7,7 +7,7 @@ import HomeDumb from "./HomeDumb";
 export const Home = () => {
     const router = useRouter();
 
-    const [setItem, , removeItem] = useLocaleStorage();
+    const [setItem, getItem, removeItem] = useLocaleStorage();
 
     const [playersName, setPlayersName] = useState("");
 
@@ -22,12 +22,17 @@ export const Home = () => {
 
     useEffect(() => {
         removeItem("playerName");
-
+        const scores = getItem("scores");
         return () => {
             setItem("playerName", playersName);
-            setItem("scores", JSON.stringify([]), false);
+
+            if (scores !== null && scores.length > 0) {
+                return;
+            } else {
+                setItem("scores", JSON.stringify([]), false);
+            }
         };
-    }, [playersName, removeItem, setItem]);
+    }, [playersName, removeItem, setItem, getItem]);
 
     return (
         <HomeDumb

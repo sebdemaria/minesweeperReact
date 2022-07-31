@@ -1,5 +1,15 @@
 @import "../utilities/indexUtils.module";
 
-.th {
-    border-color: $black;
+.scoreContainer {
+    width: 85%;
+
+    .th {
+        border-color: $black;
+    }
+}
+
+@media (max-width: $md) {
+    .scoreContainer {
+        width: 100%;
+    }
 }

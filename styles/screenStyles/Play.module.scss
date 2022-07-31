@@ -4,10 +4,21 @@
     @include defaultContainerStyle;
 
     .section {
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        @include centerAlignAndWrap;
         position: relative;
+
+        .hr {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: $md) {
+    .container {
+        .section {
+            .hr {
+                width: 90%;
+            }
+        }
     }
 }
