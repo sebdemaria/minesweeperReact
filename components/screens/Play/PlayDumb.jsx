@@ -1,7 +1,9 @@
 import { Counter } from "@components/Counter";
-import { Table } from "@components/Table/Table";
+import { Table } from "@components/Table";
 import { useBoard } from "@hooks/useBoard";
+import styles from "@styles/screenStyles/Play.module.scss";
 import Link from "next/link";
+import Scoreboard from "../../Scoreboard";
 
 export const PlayDumb = ({ playersName, cols, rows }) => {
     const [createBoard] = useBoard();
@@ -18,11 +20,12 @@ export const PlayDumb = ({ playersName, cols, rows }) => {
             </Link>
         </>
     ) : (
-        <section>
-            <h1 className="h-50">Hola {playersName}, vamos a jugar!</h1>
+        <section className={styles.section}>
+            <h1 className="h-100">Hola {playersName}, vamos a jugar!</h1>
+            <Counter />
             <Table board={board} />
 
-            {/* <Counter state={state} /> */}
+            <Scoreboard />
         </section>
     );
 };

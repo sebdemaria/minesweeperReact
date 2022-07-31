@@ -1,28 +1,43 @@
-@import '../utilities/indexUtils.module';
+@import "../utilities/indexUtils.module";
+
+.cell:hover {
+    background-color: $lightGray;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
 
 .boardDiv {
-
     display: flex;
     justify-content: center;
+    margin-top: 5em;
+    width: 100%;
 
-    .tr {
-        display: flex;
+    .tbody {
+        border-radius: 10px;
 
-        .mine {
-            @include borderBlack;
-            height: 3em;
-            margin: 0;
-            padding: 0.5em;
-            width: 3em;
+        .tr {
+            display: flex;
 
-            &:hover {
-                background-color: $lightGray;
-                transition: 0.1s ease-in-out;
+            .mine {
+                @include borderBlack;
+                border-radius: 10px;
+                height: 3em;
+                margin: 0.1em;
+                padding: 0.5em;
+                width: 3em;
             }
-        }
 
-        .mineHitted{
-            @include mineHitted;
+            .mineHitted {
+                @include mineHitted;
+            }
+
+            .cellClicked {
+                @include cellClicked;
+            }
+
+            .cellEmpty {
+                background-color: $lightGray;
+            }
         }
     }
 }

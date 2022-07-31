@@ -25,6 +25,7 @@ export const Home = () => {
 
         return () => {
             setItem("playerName", playersName);
+            setItem("scores", JSON.stringify([]), false);
         };
     }, [playersName, removeItem, setItem]);
 

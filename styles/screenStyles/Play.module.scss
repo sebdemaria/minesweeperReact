@@ -1,5 +1,13 @@
-@import '../utilities/indexUtils.module';
+@import "../utilities/indexUtils.module";
 
 .container {
     @include defaultContainerStyle;
+
+    .section {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+    }
 }

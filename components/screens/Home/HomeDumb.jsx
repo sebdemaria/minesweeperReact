@@ -8,7 +8,7 @@ const HomeDumb = ({ handleSubmit, handleInputChange }) => {
                 <label htmlFor="playerName">Ingresa tu nombre bb</label>
                 <input
                     type="name"
-                    className="form-control mt-2"
+                    className="form-control mt-2 bg-transparent border-dark"
                     id="playerName"
                     aria-describedby="playerName"
                     placeholder="Ingresa tu nombre"

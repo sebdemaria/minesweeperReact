@@ -1,10 +1,14 @@
 export const useLocaleStorage = () => {
-    const setItem = (key, value) => {
-        return localStorage.setItem(String(key), String(value));
+    const setItem = (key, value, parse = true) => {
+        if (!parse) {
+            return localStorage.setItem(String(key), value);
+        } else {
+            return localStorage.setItem(String(key), String(value));
+        }
     };
 
     const getItem = (key) => {
-        return localStorage.getItem(String(key));
+        return localStorage.getItem(key);
     };
 
     const removeItem = (key) => {
